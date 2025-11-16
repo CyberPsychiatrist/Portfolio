@@ -619,3 +619,320 @@ img{
     column-gap: 3.5rem;
   }
 }
+
+/*========== DOWNLOAD MODAL ==========*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--container-color);
+  margin: 15% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+  position: relative;
+}
+
+.modal-icon {
+  margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
+.modal-content p {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.modal-button {
+  background-color: var(--text-color-light);
+  color: var(--container-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--text-color);
+}
+
+/* Certificate links styling */
+.certificate-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.certificate-link:hover {
+  color: var(--title-color);
+}
+
+/* Dark theme modal styling */
+body.dark-theme .modal-content {
+  background-color: var(--container-color-alt);
+}
+
+body.dark-theme .modal-content h3,
+body.dark-theme .modal-content p {
+  color: var(--text-color-light);
+}
+
+body.dark-theme .modal-button {
+  background-color: var(--text-color-light);
+  color: var(--body-color);
+}
+
+body.dark-theme .modal-button:hover {
+  background-color: var(--title-color);
+}
+
+body.dark-theme .close {
+  color: var(--text-color-light);
+}
+
+body.dark-theme .close:hover {
+  color: var(--text-color);
+}
+
+/*========== CERTIFICATE ITEM STYLING ==========*/
+.certificate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-color-light);
+  transition: all 0.3s ease;
+}
+
+.certificate-item:hover {
+  background-color: var(--container-color-alt);
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.certificate-link:hover {
+  color: var(--title-color);
+}
+
+.certificate-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.certificate-icon {
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.certificate-link:hover .certificate-icon {
+  color: var(--title-color);
+  transform: scale(1.1);
+}
+
+/* Dark theme certificate styling */
+body.dark-theme .certificate-item {
+  background-color: var(--container-color-alt);
+  border-color: var(--text-color);
+}
+
+body.dark-theme .certificate-item:hover {
+  background-color: var(--container-color);
+}
+
+body.dark-theme .certificate-icon {
+  color: var(--text-color-light);
+}
+
+body.dark-theme .certificate-link:hover .certificate-icon {
+  color: var(--title-color);
+}
+
+/* Responsive certificate styling */
+@media screen and (max-width: 768px) {
+  .certificate-item {
+    padding: 0.6rem 0.8rem;
+    margin: 0.3rem 0;
+  }
+  
+  .certificate-text {
+    font-size: var(--small-font-size);
+  }
+  
+  .certificate-icon {
+    font-size: 1rem;
+  }
+}
+
+/*========== PROJECT ITEM STYLING ==========*/
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-color-light);
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  background-color: var(--container-color-alt);
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--title-color);
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.project-text {
+  display: block;
+  font-weight: var(--font-medium);
+  margin-bottom: 0.3rem;
+}
+
+.project-description {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  line-height: 1.4;
+}
+
+.project-icon {
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.project-link:hover .project-icon {
+  color: var(--title-color);
+  transform: scale(1.1);
+}
+
+/* Dark theme project styling */
+body.dark-theme .project-item {
+  background-color: var(--container-color-alt);
+  border-color: var(--text-color);
+}
+
+body.dark-theme .project-item:hover {
+  background-color: var(--container-color);
+}
+
+body.dark-theme .project-icon {
+  color: var(--text-color-light);
+}
+
+body.dark-theme .project-link:hover .project-icon {
+  color: var(--title-color);
+}
+
+/* Responsive project styling */
+@media screen and (max-width: 768px) {
+  .project-item {
+    padding: 0.6rem 0.8rem;
+    margin: 0.3rem 0;
+  }
+  
+  .project-text {
+    font-size: var(--small-font-size);
+  }
+  
+  .project-description {
+    font-size: var(--smaller-font-size);
+  }
+  
+  .project-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
