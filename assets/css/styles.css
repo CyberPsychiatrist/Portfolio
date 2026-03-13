@@ -936,3 +936,111 @@ body.dark-theme .project-link:hover .project-icon {
     opacity: 1;
   }
 }
+
+/*========== PRESENTATION BUTTON STYLING ==========*/
+.presentation-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.presentation-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  background-color: var(--container-color);
+  border: 1px solid var(--text-color-light);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.presentation-btn:hover {
+  background-color: var(--container-color-alt);
+  border-color: var(--text-color);
+  color: var(--title-color);
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-btn i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.presentation-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Dark theme presentation buttons */
+body.dark-theme .presentation-btn {
+  background-color: var(--container-color-alt);
+  border-color: var(--text-color-light);
+  color: var(--text-color);
+}
+
+body.dark-theme .presentation-btn:hover {
+  background-color: var(--container-color);
+  border-color: var(--text-color);
+  color: var(--title-color);
+}
+
+/* Responsive presentation buttons */
+@media screen and (max-width: 768px) {
+  .presentation-buttons {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .presentation-btn {
+    font-size: var(--smaller-font-size);
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*========== PROJECT ITEM WITH PRESENTATION STYLING ==========*/
+.project-item-with-presentation {
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-color-light);
+  transition: all 0.3s ease;
+}
+
+.project-item-with-presentation:hover {
+  background-color: var(--container-color-alt);
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.project-link-wrapper:hover {
+  color: var(--title-color);
+}
+
+/* Dark theme for enhanced project items */
+body.dark-theme .project-item-with-presentation {
+  background-color: var(--container-color-alt);
+  border-color: var(--text-color);
+}
+
+body.dark-theme .project-item-with-presentation:hover {
+  background-color: var(--container-color);
+}
